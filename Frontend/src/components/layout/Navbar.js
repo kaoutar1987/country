@@ -22,7 +22,7 @@ const Navbar = () => {
               <a className="nav-link" href="/"><Link to="/langues">les langues</Link></a>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="/"><Link to="/paysN">nome du pays</Link></a>
+              <a className="nav-link" href="/"><Link to="/paysN">nom du pays</Link></a>
             </li>
           </ul>
     

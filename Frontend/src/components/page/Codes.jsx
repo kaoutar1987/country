@@ -34,21 +34,21 @@ const Codes = ({ alpha3Code, alpha2Code, flag, name}) => {
             <div className="container-fluid w-25 p-3">
                 <form className="d-flex">
                     <input onChange={e => setInput(e.target.value)} className="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
-                  
+                    <button className="btn btn-outline-success" type="submit">Search</button>
                 </form>
             </div>
 
             <div className="container countries">
-                {Codes && output.map(res => (
+                {Codes && output.map((res, index) => (
                     <>
-                        <div className='country'>
+                        <div key={index} className='country'>
                             <div className="country-image">
                                 <img src={res.flag} alt="flag" />
                             </div>
                              <div className='country-detail'>
                                 <p>{res.alpha3Code} </p>
                                 <p>{res.alpha2Code}</p>
-                                <Link to={`/capitale/${res.name}`}>
+                                <Link to={`/ShowCoun/${res.name}`}>
                                     <button className="btn btn-primary">show more</button>
                                 </Link>
 
